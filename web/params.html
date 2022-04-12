@@ -1,0 +1,19 @@
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const jobId = params.get("a");
+  const jobnx = params.get("b");
+  const jobfx = params.get("c");
+  if (jobId) {
+    document.write("Authenticate for " + jobId + " to change the rank on your " + jobnx + " with the Redirect Url to be {" + jobfx + "}")
+  } else {
+      window.location.href = "https://www.error.com"
+  }
+  
+  function redirect(){
+      window.location.href = jobfx
+  }
+</script>
+
+<br><br>
+<h1>Authenticate to the Page</h1>
+<button onclick="redirect()">Authenticate</button>
